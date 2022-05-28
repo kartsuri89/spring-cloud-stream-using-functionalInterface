@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    function:
+      definition: transformer;data;consumer;
+    stream:
+      bindings:
+        data-in-0:  
+          destination: data-in
+        data-out-0:
+          destination: data-out
+        transformer-in-0:
+          destination: data-out
+        transformer-out-0:
+          destination: transformer-out
+        consumer-in-0:
+          destination: transformer-out
+
+        
